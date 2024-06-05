@@ -38,5 +38,5 @@ const firmSchema = new schema({
         ref:'product '
     }]
 })
-const firm = mongoose.model('firm',firmSchema)
-module.exports = firm
+const Firm1 = mongoose.model('Firm1',firmSchema)
+module.exports = Firm1
