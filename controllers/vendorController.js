@@ -37,7 +37,7 @@ const vendorLogin = async (req, res) => {
         if(!getVendor || !(await bcrypt.compare(password,getVendor.password))){
             return res.status(401).json({error:"Inavalid username or password"})
         }
-        const secretKey = process.env.whatISYOUNAME
+        const secretKey = process.env.whatISYOURNAME
         const token = jwt.sign({vendorId:getVendor._id},secretKey,{expiresIn:"1h"})
         res.status(200).json({success: "Login successful",token}) 
         console.log("token",token)

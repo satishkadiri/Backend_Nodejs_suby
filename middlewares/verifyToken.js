@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 const dotEnv = require('dotenv')
 
 dotEnv.config()
-const secretKey = process.env.whatISYOUNAME
+const secretKey = process.env.whatISYOURNAME
 const VerifyToken = async(req,res,next) =>{
     const token = req.headers.token|| req.headers.bearer;
     if(!token){
